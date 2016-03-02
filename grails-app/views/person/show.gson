@@ -1,0 +1,7 @@
+import org.grails.demo.Person
+
+model {
+	Person person
+}
+
+json g.render(template: "/templates/common/person", model: [person: person])

@@ -1,0 +1,8 @@
+import org.grails.demo.Address
+
+model {
+	Iterable<Address> addressList
+}
+
+json g.render(template: "/templates/common/address", collection: addressList ?: [], var: 'address')
+

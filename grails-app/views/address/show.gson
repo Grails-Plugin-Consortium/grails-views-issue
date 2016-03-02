@@ -1,0 +1,7 @@
+import org.grails.demo.Address
+
+model {
+	Address address
+}
+
+json g.render(template: "/templates/common/address", model: [address: address])

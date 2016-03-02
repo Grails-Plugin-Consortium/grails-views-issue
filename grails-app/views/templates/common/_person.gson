@@ -1,0 +1,10 @@
+import org.grails.demo.Person
+
+model {
+    Person person
+}
+
+json {
+    name person.name
+    addresses g.render(template: "/templates/common/address", collection: person.addresses ?: [], var: 'address')
+}
